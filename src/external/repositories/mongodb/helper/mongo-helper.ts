@@ -12,7 +12,7 @@ export const MongoHelper = {
     this.client.close()
   },
   getCollection (name: string): Collection {
-    return this.clienc.db().collection(name)
+    return this.client.db().collection(name)
   },
   clearCollection (name: string): void {
     this.client.db().collection(name).deleteMany({})
